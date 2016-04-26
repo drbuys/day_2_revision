@@ -1,5 +1,6 @@
 require( 'minitest/autorun' )
 require_relative( 'ruby_functions_practice' )
+require 'date'
 
 class Functions_Practice < MiniTest::Test
 
@@ -70,8 +71,6 @@ class Functions_Practice < MiniTest::Test
   def test_volume_of_cube()
     test_volume = volume_of_cube (2)
     assert_equal(8, test_volume)
-    
-
   end
 
   #Given the radius of a sphere calculate the volume
