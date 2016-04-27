@@ -33,7 +33,7 @@ def add_string_as_number( num_1, num_2 )
 end
 
 def number_to_full_month_name( num )
-  case num 
+  case num
   when 1
     return "January"
   when 3
@@ -48,18 +48,19 @@ def number_to_full_month_name( num )
 end
 
 def number_to_short_month_name( num )
-  case num 
-  when 1
-    return "Jan"
-  when 3
-    return "Mar"
-  when 9
-    return "Sep"
-  end
-
-  # month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-  # num = num - 1
-  # return month[num].slice(0..2)
+#   case num
+#   when 1
+#     return "Jan"
+#   when 3
+#     return "Mar"
+#   when 9
+#     return "Sep"
+#   end
+#
+#   # month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+#   # num = num - 1
+#   # return month[num].slice(0..2)
+  return number_to_full_month_name(num).slice(0..2)
 end
 
 def volume_of_cube( num )
@@ -78,10 +79,3 @@ end
 def age_of_person ( dob )
     return ((Date.today - dob).to_i / 365)
 end
-
-
-
-
-
-
-
