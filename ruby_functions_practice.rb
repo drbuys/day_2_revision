@@ -62,7 +62,7 @@ def number_to_short_month_name( num )
 #   # return month[num].slice(0..2)
 
   return number_to_full_month_name(num).slice(0..2)
-  
+
 end
 
 def volume_of_cube( num )
@@ -78,6 +78,18 @@ def days_until_christmas (date)
   return christmas - date
 end
 
+# def days_until_christmas()
+#   today = Date.today
+#   christmas = Date.new(today.year,12,25)
+#   sleeps = (christmas - today.to_i)
+#   return sleeps
+# end
+
 def age_of_person ( dob )
-    return ((Date.today - dob).to_i / 365)
+  today = Date.today
+  age = today.year - dob.year
+  birthday_passed = today.month > dob.month || (today.month == dob.month && dob.day > today.day)
+  age -= 1 unless birthday_passed
+  return age
+    #return ((Date.today - dob).to_i / 365)
 end
