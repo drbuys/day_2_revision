@@ -52,7 +52,7 @@ class Functions_Practice < MiniTest::Test
     third_month_string = number_to_full_month_name( 3 )
     ninth_month_string = number_to_full_month_name( 9 )
     assert_equal( "January", first_month_string )
-    assert_equal( "March", third_month_string ) 
+    assert_equal( "March", third_month_string )
     assert_equal( "September", ninth_month_string )
   end
 
@@ -67,7 +67,7 @@ class Functions_Practice < MiniTest::Test
 
   #Further
 
-  #Given the length of a side of a cube calculate the volume 
+  #Given the length of a side of a cube calculate the volume
   def test_volume_of_cube()
     test_volume = volume_of_cube (2)
     assert_equal(8, test_volume)
@@ -84,8 +84,8 @@ class Functions_Practice < MiniTest::Test
   #Days until christmas, Calculate how many nights there are from today until Christmas morning
   def test_days_until_christmas()
       test_days = days_until_christmas (Date.today)
-      today = Date.new(2016,12,25) - Date.today
-      assert_equal(today, test_days)
+      days = Date.new(2016,12,25) - Date.today
+      assert_equal(days, test_days)
   end
 
   #Given a date of birth, calculate how old a person born on that date would be
