@@ -60,7 +60,9 @@ def number_to_short_month_name( num )
 #   # month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 #   # num = num - 1
 #   # return month[num].slice(0..2)
+
   return number_to_full_month_name(num).slice(0..2)
+  
 end
 
 def volume_of_cube( num )
